@@ -1,0 +1,17 @@
+.drop-down-container {
+    transition: 1s all;
+
+    position: relative;
+    overflow: hidden;
+
+    display: grid;
+    align-content: flex-start;
+}
+
+.drop-down-container.hidden {
+    height: 0;
+}
+
+.drop-down-menu {
+    position: relative;
+}
