@@ -5,6 +5,7 @@ const dropDowns = document.querySelectorAll('.drop-down');
 dropDownButtons.forEach(btn => {
     btn.addEventListener('mouseover',showDropDown);
     btn.addEventListener('mouseleave',hideDropDown);
+    btn.style.backgroundColor = `#${Math.floor(Math.random()*16777215).toString(16)}`;
 });
 
 dropDownContainers.forEach(cnt => {
@@ -19,13 +20,11 @@ function showDropDown(event){
     } else {
         container = event.currentTarget;
     }
-    console.log(container);
 
     let totalHeight = 0;
     for (const child of container.children) {
         totalHeight += child.offsetHeight;
     }
-    console.log(totalHeight)
     
     container.classList.remove('hidden');
     container.style.height = `${totalHeight}px`;
@@ -38,7 +37,6 @@ function hideDropDown(event){
     } else {
         container = event.target;
     }
-    console.log(container);
 
     container.classList.add('hidden');
     container.style.height = 0;

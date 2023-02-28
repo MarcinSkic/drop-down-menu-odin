@@ -1,4 +1,9 @@
+body {
+    margin: 0;
+}
+
 .drop-down-container {
+    width: fit-content;
     transition: 1s all;
 
     position: relative;
@@ -13,5 +18,13 @@
 }
 
 .drop-down-menu {
-    position: relative;
+    width: fit-content;
 }
+
+.drop-down-button {
+    padding: 5px 10px;
+    background-color: aquamarine;
+    border: none;
+}
+
+
