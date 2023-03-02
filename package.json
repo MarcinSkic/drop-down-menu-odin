@@ -1,0 +1,19 @@
+{
+  "name": "drop-down-menu",
+  "version": "0.3.0",
+  "description": "Code with styling that makes any DOM element a drop-down menu",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcinSkic/drop-down-menu-odin.git"
+  },
+  "author": "Marcin Skic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarcinSkic/drop-down-menu-odin/issues"
+  },
+  "homepage": "https://github.com/MarcinSkic/drop-down-menu-odin#readme"
+}
