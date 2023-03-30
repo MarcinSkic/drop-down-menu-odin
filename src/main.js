@@ -11,7 +11,7 @@ window.onload = function generateDropDownMenus() {
             container = event.currentTarget;
         }
 
-        let totalHeight = 0;
+        let totalHeight = container.offsetHeight;
         [...container.children].forEach((child) => {
             totalHeight += child.offsetHeight;
         });
@@ -32,14 +32,14 @@ window.onload = function generateDropDownMenus() {
         container.style.height = 0;
     }
 
-    dropDownButtons.forEach((btn) => {
-        btn.addEventListener('mouseover', showDropDown);
-        btn.addEventListener('mouseleave', hideDropDown);
-        btn.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+    dropDownContainers.forEach((cnt) => {
+        cnt.addEventListener('mouseover', showDropDown, { capture: false });
+        cnt.addEventListener('mouseleave', hideDropDown);
     });
 
-    dropDownContainers.forEach((cnt) => {
-        cnt.addEventListener('mouseover', showDropDown);
-        cnt.addEventListener('mouseleave', hideDropDown);
+    dropDownButtons.forEach((btn) => {
+        btn.addEventListener('mouseover', showDropDown, { capture: false });
+        btn.addEventListener('mouseleave', hideDropDown);
+        btn.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
     });
 };
