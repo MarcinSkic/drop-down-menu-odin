@@ -13,7 +13,7 @@ window.onload = function generateDropDownMenus() {
 
         let totalHeight = 0;
         [...container.children].forEach((child) => {
-            totalHeight += child;
+            totalHeight += child.offsetHeight;
         });
 
         container.classList.remove('hidden');
